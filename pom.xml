@@ -1,20 +1,21 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>br.edu.ifg.numbers</groupId>
-  <artifactId>spring-cars</artifactId>
+  <groupId>br.edu.poo2.alunoAPI</groupId>
+  <artifactId>spring-alunos</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>Carro API</name>
+  <name>Aluno API</name>
   <description>API backend CRUD com Maven, PostgreSQL, Flyway e Spring Boot</description>
   <url>http://maven.apache.org</url>
   <properties>
-    <java.version>17</java.version>
+    <java.version>21</java.version>
     <spring-boot.version>3.1.6</spring-boot.version>
-    <postgresql.version>42.2.23</postgresql.version>
+    <postgresql.version>42.5.0</postgresql.version> <!-- Atualize para a versão mais recente -->
     <flyway.version>9.22.1</flyway.version>
     <spring-boot-Start.version>3.4.0</spring-boot-Start.version>
   </properties>
+
 
   <dependencies>
     <!-- Spring Boot Starter Web -->
@@ -38,6 +39,12 @@
       <version>${postgresql.version}</version>
     </dependency>
 
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+        <scope>test</scope>
+    </dependency>
+    
     <!-- Flyway -->
     <dependency>
       <groupId>org.flywaydb</groupId>
@@ -62,7 +69,7 @@
         <artifactId>spring-boot-maven-plugin</artifactId>
         <version>${spring-boot.version}</version>
         <configuration>
-          <mainClass>br.edu.ifg.numbers.carroapi.SpringCarsApplication</mainClass>
+          <mainClass>br.edu.ifg.poo2.alunoAPI.SpringAlunApplication</mainClass>
         </configuration>
       </plugin>
     </plugins>
